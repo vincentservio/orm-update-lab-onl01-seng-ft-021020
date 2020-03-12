@@ -24,6 +24,8 @@ attr_reader :id
     DB[:conn].execute(sql)
   end
   
+  
+  
    def save
      if self.id
     self.update
@@ -37,6 +39,8 @@ attr_reader :id
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
 end
+  
+  
   
     def self.drop_table
               sql = <<-SQL
