@@ -42,8 +42,7 @@ attr_reader :id
   
 end
   
-    
-    
+  
   
   
     def self.drop_table
