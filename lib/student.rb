@@ -25,7 +25,7 @@ attr_reader :id
   end
   
      def self.create(name:, genre:)
-    student = Song.new(name, genre)
+    student = Student.new(name, genre)
     student.save
     student
   end
