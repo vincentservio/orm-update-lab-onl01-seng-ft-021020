@@ -51,7 +51,7 @@ attr_reader :id
   
 
 
-    def self.create(name, grade)
+    def self.create(name, grade:)
     student = Student.new(name, grade)
     student.save
     student
@@ -61,7 +61,7 @@ attr_reader :id
     id = row[0]
     name = row[1]
     grade = row[2]
-    self.new(name, grade, id)
+    self.new(id, name, grade)
   end 
 
    def self.find_by_name(name)
