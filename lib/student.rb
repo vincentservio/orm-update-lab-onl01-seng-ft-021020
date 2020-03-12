@@ -29,11 +29,11 @@ attr_reader :id
     self.update
   else
     sql = <<-SQL
-      INSERT INTO songs (name, genre)
+      INSERT INTO students (name, genre)
       VALUES (?, ?)
     SQL
     DB[:conn].execute(sql, self.name, self.genre)
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
 end
 end
