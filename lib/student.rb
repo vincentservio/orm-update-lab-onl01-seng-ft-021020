@@ -24,13 +24,11 @@ attr_reader :id
     DB[:conn].execute(sql)
   end
   
-    def self.drop_table
-              sql = <<-SQL
-                DROP TABLE  students ;
-                SQL
-                DB[:conn].execute(sql)
-            end
-  
+     def self.create(name:, album:)
+    song = Song.new(name, album)
+    song.save
+    song
+  end
 
 end
 
