@@ -12,7 +12,6 @@ attr_reader :id
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
-
     def self.create_table
     sql =  <<-SQL
       CREATE TABLE IF NOT EXISTS students (
@@ -23,6 +22,7 @@ attr_reader :id
         SQL
     DB[:conn].execute(sql)
   end
+
   
      def self.create(name:, grade:)
     student = Student.new(name, grade)
