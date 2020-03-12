@@ -24,10 +24,10 @@ attr_reader :id
     DB[:conn].execute(sql)
   end
   
-     def self.create(name:, album:)
-    song = Song.new(name, album)
-    song.save
-    song
+     def self.create(name:, genre:)
+    student = Song.new(name, genre)
+    student.save
+    student
   end
 
 end
